@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Simple Currency Converter</string>
+    <string name="an_image">An image</string>
+    <string name="aLabel">請輸入一個數字，輸出為輸入的數字乘以 1.5 ：</string>
+    <string name="decimalExample">15.6</string>
+    <string name="buttonText">計算</string>
 </resources>
