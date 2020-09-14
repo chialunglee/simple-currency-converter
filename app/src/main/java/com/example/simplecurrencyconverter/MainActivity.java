@@ -18,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
     public void convertCurrency(View view) {
         EditText numberInput = (EditText) findViewById(R.id.numberInput);
         String originalInput = numberInput.getText().toString();
-        if (originalInput.isEmpty()) {
-            Toast.makeText(this, "請輸入數字！", Toast.LENGTH_LONG).show();
-        }
-        else {
+        try {
             double convertedInput = Double.parseDouble(originalInput);
             double result = convertedInput * 1.5;
             String outputText = String.format("%.2f", result);
             Toast.makeText(this, outputText, Toast.LENGTH_LONG).show();
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+            System.out.println(e);
         }
     }
 }
